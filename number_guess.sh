@@ -5,7 +5,7 @@ PSQL="psql -X --username=freecodecamp --dbname=number_guess --tuples-only -c"
 
 # Generate a random number between 1 and 1000
 RANDOM_NUMBER=$((RANDOM % 1000 + 1))
-echo $RANDOM_NUMBER
+# echo $RANDOM_NUMBER
 echo -e "\n~~~~ Welcome to Number Guessing Game ~~~~\n"
 
 # ask player to enter their username
@@ -33,7 +33,7 @@ then
     # get best game
     BEST_GAME=$($PSQL "SELECT number_of_tries FROM (SELECT * FROM players INNER JOIN games USING (player_id)) t WHERE name = '$USERNAME' ORDER BY number_of_tries LIMIT 1")
 
-    echo "Welcome back,$USERNAME! You have played $TOTAL_PLAYED_GAMES games, and your best game took $BEST_GAME guesses." | tr -s ' ' | sed 's/^ *//;s/ *$//'
+    echo "Welcome back, $USERNAME! You have played $TOTAL_PLAYED_GAMES games, and your best game took $BEST_GAME guesses." | tr -s ' ' | sed 's/^ *//;s/ *$//'
   fi
 
   # get player id
