@@ -21,7 +21,7 @@ DROP DATABASE number_guess;
 -- Name: number_guess; Type: DATABASE; Schema: -; Owner: freecodecamp
 --
 
-CREATE DATABASE number_guess WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'en_us.UTF-8' LC_CTYPE = 'en_us.UTF-8';
+CREATE DATABASE number_guess WITH TEMPLATE = template0 ENCODING = 'UTF8' LC_COLLATE = 'C.UTF-8' LC_CTYPE = 'C.UTF-8';
 
 
 ALTER DATABASE number_guess OWNER TO freecodecamp;
